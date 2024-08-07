@@ -1,75 +1,42 @@
-## Foundry Boilerplate
+# Blockful's Froundry Boilerplate
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Getting Started
 
-Foundry consists of:
+Start by getting `foundryup` latest version and installing the dependencies:ssss
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+```sh
+$ curl -L https://foundry.paradigm.xyz | bash
+$ foundryup
+$ yarn
+```
 
+If this is your first time with Foundry, check out the
+[installation](https://github.com/foundry-rs/foundry#installation) instructions.
 
-## Getting started
+### Clean
 
-### Installation
+Delete the build artifacts and cache directories:
 
-- Install [Foundry](https://getfoundry.sh/).
-- Run `make install` to install the git hooks.
+```sh
+$ yarn clean
+```
 
+### Compile
 
-## Documentation
+Compile the contracts:
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```sh
+$ yarn build
 ```
 
 ### Test
 
-```shell
-$ forge test
+Run the tests:
+
+```sh
+$ yarn test
 ```
 
-### Format
+## License
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This project is licensed under MIT.
